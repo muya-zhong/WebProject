@@ -1,0 +1,17 @@
+# 压缩包不提交
+*.zip
+*.rar
+*.7z
+
+# 系统缓存文件
+Thumbs.db
+.DS_Store
+
+# VSCode
+.vscode/
+*.log
+
+# Python相关（如果你后面放py文件）
+__pycache__/
+venv/
+*.pyc
