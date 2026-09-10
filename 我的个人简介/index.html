@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人空间 - 钟沐雅</title>
+    <!-- 引入外部css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <div class="logo page-title">个人空间</div>
+        <div class="nav-menu">
+            <a href="#">首页</a>
+            <a href="#">我的爱好</a>
+            <a href="#">我的相册</a>
+            <a href="#">技能介绍</a>
+            <a href="#">联系我</a>
+        </div>
+    </nav>
+    <!-- 顶部轮播大图【修改这里，增加内层img容器用来做视差移动】 -->
+    <div class="banner">
+        <div class="banner-img-wrap">
+            <img src="./images/banner2.jpg" alt="banner">
+        </div>
+    </div>
+    <!-- 主体内容区域 -->
+    <div class="container">
+        <!-- 左侧个人信息卡片 -->
+        <div class="left-card">
+            <div class="card-inner">
+                <div class="avatar">
+                <img src="./images/avatar.jpg" alt="头像">
+                </div>
+                <h2>钟沐雅</h2>
+                <div class="info-line">学校：安庆师范大学</div>
+                <div class="info-line">年级：25级新生</div>
+                <div class="info-line">学院：人工智能与计算机学院</div>
+                <div class="info-line">专业：数据科学与大数据技术</div>
+                <div class="info-line">关键词：编程、音乐、王者荣耀</div>
+            </div>
+        </div>
+
+        <!-- 右侧关于我 -->
+        <div class="right-wrap">
+            <div class="about-card">
+                <h3>关于我</h3>
+                <p>
+                    Hello,我是钟沐雅,一名刚刚踏入大学的新生，就读数据科学与大数据技术专业。
+                    对计算机、数据分析充满兴趣,正在学习HTML、CSS、Python等技术,希望不断提升自己专业能力。
+                </p>
+                <p>
+                    未来希望深耕大数据与人工智能相关方向，把学到的技术落地实践。
+                </p>
+                <!-- ==========新增部分：语义清晰的按钮和展示区域========== -->
+                <button id="showGoalBtn">查看我的学习目标</button>
+                <div id="goalText"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        我的个人网页
+    </footer>
+    <!-- 引入外部js -->
+    <script src="./app.js"></script>
+</body>
+</html>
