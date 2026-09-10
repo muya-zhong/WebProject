@@ -1,0 +1,38 @@
+黄梅戏项目介绍 安徽安庆
+https://www.ihchina.cn/art/detail/id/13280.html
+用途：概况、剧目、申报地区
+
+黄梅戏项目介绍 湖北
+https://www.ihchina.cn/project_details/23673.html
+用途：了解同一剧种的不同项目条目
+
+安庆师范大学青春版女驸马报道
+https://www.aqnu.edu.cn/info/1004/1742351.htm
+用途：校园黄梅戏实践
+
+澳门文化局黄梅戏折子戏介绍
+https://www.icm.gov.mo/en/events/detail/2396
+用途：英文文化介绍
+
+黄梅戏图片分类
+https://commons.wikimedia.org/wiki/Category:Huangmei_opera
+用途：查阅图片来源和许可
+
+黄梅戏演出人物 图片来源
+https://commons.wikimedia.org/wiki/File:HuangmeiOpera.jpg
+用途：CC BY-SA 2.0
+
+黄梅戏生活化服饰演出场景 图片来源
+https://commons.wikimedia.org/wiki/File:HuangmeiOperaInformal.jpg
+用途：CC BY-SA 2.0
+
+黄梅戏会馆建筑 图片来源
+https://commons.wikimedia.org/wiki/File:%E9%BB%84%E6%A2%85%E6%88%8F%E4%BC%9A%E9%A6%86_-_panoramio.jpg
+用途：CC BY 3.0
+
+黄冈黄梅戏大剧院外观 图片来源
+https://commons.wikimedia.org/wiki/File:%E9%BB%84%E5%86%88%C2%B7%E9%BB%84%E6%A2%85%E6%88%8F%E5%A4%A7%E5%89%A7%E9%99%A2.jpg
+用途：CC BY-SA 4.0
+
+页面内锚点示例：<a href="#plays">代表剧目</a> 对应 <h2 id="plays">代表剧目</h2>
+返回顶部：<a href="#top">返回顶部</a> 对应 <h1 id="top">走近黄梅戏</h1>

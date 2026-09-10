@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>实验二 黄梅戏介绍页任务书</title>
+    <style>
+      body {
+        max-width: 1000px;
+        margin: 32px auto;
+        padding: 0 24px;
+        color: #262626;
+        background: #fffdf8;
+        font-family: "Microsoft YaHei", sans-serif;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      h1, h2, h3 {
+        color: #782d2b;
+        line-height: 1.4;
+      }
+
+      h2 {
+        margin-top: 36px;
+      }
+
+      a {
+        color: #782d2b;
+        text-underline-offset: 4px;
+      }
+
+      p, li, dd, td {
+        overflow-wrap: anywhere;
+      }
+
+      figure {
+        margin: 24px 0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        font-size: 14px;
+      }
+
+      dt {
+        font-weight: bold;
+      }
+
+      dd {
+        margin: 0 0 16px 24px;
+      }
+
+      pre {
+        padding: 18px;
+        background: #f0ece5;
+        overflow-x: auto;
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+
+      hr {
+        margin: 32px 0;
+        border: 0;
+        border-top: 1px solid #ccbca9;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        table-layout: fixed;
+      }
+
+      th, td {
+        padding: 10px;
+        border: 1px solid #d6cec2;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        background: #f0ece5;
+      }
+
+      @media print {
+        body {
+          max-width: none;
+          margin: 0;
+          padding: 0;
+          font-size: 11pt;
+          background: white;
+        }
+
+        h2, h3 {
+          break-after: avoid;
+        }
+
+        tr, figure {
+          break-inside: avoid;
+        }
+
+        thead {
+          display: table-header-group;
+        }
+
+        pre {
+          white-space: pre-wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- h1：页面主标题；id：页内链接的定位目标。 -->
+    <h1 id="top">实验二 黄梅戏介绍页</h1>
+    <p>Web前端技术实验 · 2026—2027学年第一学期<br>建议2学时，共90分钟 · 独立完成</p>
+    <p>本次使用HTML制作图文并茂的黄梅戏介绍页。读者应能了解黄梅戏概况、代表剧目和戏曲术语，看到相关图片，并通过链接查阅资料。</p>
+    <p><strong>本任务书本身就是本节课的HTML示例。</strong>可用VS Code打开本文件，对照浏览器查看标题、段落、三类列表、图片、链接和代码片段的写法。<em>先理解内容含义，再选择标签。</em></p>
+
+
+    <!-- ul：并列的目录项目；a：页内锚点链接。 -->
+    <h2>阅读目录</h2>
+    <ul>
+      <li><a href="#goals">学习目标</a></li>
+      <li><a href="#resources">素材与图片</a></li>
+      <li><a href="#requirements">任务要求</a></li>
+      <li><a href="#checks">对照实验与纠错</a></li>
+      <li><a href="#submit">提交与评分</a></li>
+      <li><a href="#tags">附录 标签与英文名称</a></li>
+    </ul>
+    <hr>
+
+    <h2 id="goals">一 学习目标</h2>
+    <ul>
+      <li>使用<code>&lt;h1&gt;</code>、<code>&lt;h2&gt;</code>、<code>&lt;p&gt;</code>组织标题和段落，区分<code>&lt;br&gt;</code>换行与段落分隔。</li>
+      <li>使用<code>&lt;strong&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;sup&gt;</code>、<code>&lt;sub&gt;</code>表达重要性、强调和上下标。</li>
+      <li>使用<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;dl&gt;</code>表达并列事项、先后步骤及名称与说明。</li>
+      <li>使用<code>&lt;pre&gt;</code>与<code>&lt;code&gt;</code>显示带缩进的源码，理解字符转义。</li>
+      <li>插入本地图片，填写alt并保留图片来源；实现外部链接与页内跳转。</li>
+    </ul>
+    <p>准备：会用VS Code打开文件夹、编辑保存，并用浏览器打开和刷新HTML。复制“起始项目”，按“实验02-专业-年级-班级-姓名-学号”命名，例如“实验02-大数据-24级-1班-张三-学号”。</p>
+
+    <h2 id="resources">二 素材与图片</h2>
+    <p>先打开<a href="素材库/素材库预览.html">黄梅戏素材库</a>，从12段文字和4张本地图片中选取需要的内容。无需重新下载图片；起始项目的images目录已经备齐文件。</p>
+    <ul>
+      <li><a href="素材库/页面素材.txt">页面素材</a>：页面内容与编写提示。</li>
+      <li><a href="素材库/01_可选文字素材.txt">可选文字素材</a>：概况、特点、代表剧目、校园实践和欣赏建议。</li>
+      <li><a href="素材库/02_超链接清单.txt">超链接清单</a>：9个文化资料或图片来源链接。</li>
+      <li><a href="素材库/03_图片来源与使用说明.txt">图片作者与许可说明</a>：选用图片时保留对应署名。</li>
+      <li><a href="素材库/04_图片与链接代码示例.txt">图片与链接代码片段</a>：可对照修改路径和说明。</li>
+    </ul>
+
+    <!-- figure与figcaption组合图片和说明；img使用相对路径。 -->
+    <figure>
+      <img src="素材库/images/huangmei-stage.jpg" alt="两位身穿戏装的黄梅戏演出人物" width="360">
+      <figcaption>黄梅戏演出照片。摄影：Lavastyle；<a href="https://commons.wikimedia.org/wiki/File:HuangmeiOpera.jpg">图片来源</a>；<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>。本地未修改。</figcaption>
+    </figure>
+    <p>文化概况可查阅<a href="https://www.ihchina.cn/art/detail/id/13280.html">中国非物质文化遗产网的黄梅戏介绍</a><sup>[1]</sup>。外部资料需联网，本地正文与图片可离线阅读。</p>
+    <p>“入门欣赏步骤”提供一种了解黄梅戏的方法，同学们也可以根据自己的经验调整顺序。</p>
+
+    <!-- dl、dt、dd：用“内容名称—具体要求”的关系组织任务。 -->
+    <h2 id="requirements">三 任务要求</h2>
+    <dl>
+      <dt>标题与概况</dt>
+      <dd>一个<code>&lt;h1&gt;</code>，至少四个<code>&lt;h2&gt;</code>；撰写两段介绍，每段至少40个汉字。</dd>
+      <dt>文本语义</dt>
+      <dd>重要提醒用<code>&lt;strong&gt;</code>，语气强调用<code>&lt;em&gt;</code>；资料来源与整理者用一次<code>&lt;br&gt;</code>分行；用<code>&lt;hr&gt;</code>表示主题转换。资料注号使用<code>&lt;sup&gt;</code>，记录编号变量x<sub>1</sub>使用<code>&lt;sub&gt;</code>，并注明它只是下标练习。</dd>
+      <dt>三类列表</dt>
+      <dd><code>&lt;ul&gt;</code>列出至少3个剧目，其中一个li内嵌套至少2项欣赏要点；<code>&lt;ol&gt;</code>列出至少4个入门步骤；<code>&lt;dl&gt;</code>至少3组<code>&lt;dt&gt;</code>与<code>&lt;dd&gt;</code>，解释唱腔、念白、身段。</dd>
+      <dt>代码摘录</dt>
+      <dd>用<code>&lt;pre&gt;</code>和<code>&lt;code&gt;</code>显示至少3行带缩进的HTML，尖括号通过字符引用显示。</dd>
+      <dt>图片</dt>
+      <dd>至少1张相关图片，放在项目images目录，以相对路径引用。alt要有实际含义；图注注明作者、来源和许可。保持图片比例。</dd>
+      <dt>超链接</dt>
+      <dd>至少1个外部文化资料链接和1个页内锚点链接。链接文字清楚，目标id唯一，点击后能跳到对应位置。</dd>
+    </dl>
+    <p>styles.css提供基础排版，可直接使用。任务书附录使用表格方便查阅，<strong>本实验不要求学生制作表格，也不要求JavaScript或表单。</strong></p>
+
+    <h3>最小代码示例</h3>
+    <!-- pre保留缩进和换行；&lt;与&gt;避免示例被当作标签解析。 -->
+    <pre><code>&lt;a href="#plays"&gt;代表剧目&lt;/a&gt;
+&lt;h2 id="plays"&gt;代表剧目&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;《天仙配》&lt;/li&gt;
+  &lt;li&gt;《女驸马》&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src="images/huangmei-stage.jpg" alt="黄梅戏演出人物"&gt;</code></pre>
+    <p><strong>路径提示：</strong>任务书的图片位于“素材库/images”；你自己的index.html应引用同级images目录，不能直接照抄任务书的图片路径。</p>
+
+    <h2 id="checks">四 对照实验与纠错</h2>
+    <h3>空白与换行</h3>
+    <p>打开checks.html，先预测<code>&lt;p&gt;</code>与<code>&lt;pre&gt;</code>中的连续空格和换行如何显示，再观察。仅将<code>&lt;p&gt;</code>改成<code>&lt;pre&gt;</code>，记录变化后恢复原标签。不要改动实验文本中的空白。</p>
+    <h3>有序列表编号</h3>
+    <p><code>&lt;ol&gt;</code>设置start="3"，第二项li设置value="7"。先预测四项编号，再观察；仅将value改为5后再次观察，最后恢复7。选做：将<code>&lt;ol&gt;</code>的type改为A。</p>
+    <h3>列表结构纠错</h3>
+    <p>debug.html包含两处故意设置的错误：子列表位置错误、<code>&lt;dd&gt;</code>写进<code>&lt;dt&gt;</code>。各记录修改前后代码与理由。浏览器能显示不代表源代码结构正确。</p>
+    <h3>图片和链接验证</h3>
+    <ul>
+      <li>从本地打开index.html，确认图片加载、比例正常、alt和署名已填写。</li>
+      <li>点击外部资料链接，核对目标页面；若网络不可用，如实记录未完成联网验证。</li>
+      <li>点击页内导航，确认跳至对应栏目；目标id不得重复。</li>
+    </ul>
+
+    <h2 id="submit">五 提交与评分</h2>
+    <p>将项目文件夹压缩后提交，文件名示例：<code>实验02-大数据-24级-1班-张三-学号.zip</code>。请按本人实际专业、年级、班级、姓名和学号填写。具体截止时间由教师课堂确认。</p>
+    <ul>
+      <li>完整项目：index.html、styles.css、checks.html、修复后的debug.html、填写完成的report.html和screenshots截图文件夹。</li>
+      <li>images文件夹与图片来源说明。</li>
+      <li>实验报告：使用<a href="起始项目/report.html">HTML实验报告模板（report.html）</a>填写，记录预测、实测、纠错和图片链接验证。用VS Code填写并保存，报告与index.html放在同一目录，截图使用相对路径。</li>
+      <li>screenshots文件夹：至少包含主页面、空白对照、编号实验3类截图；主页面较长可分多张，须覆盖图片与全部区块。</li>
+    </ul>
+    <p>可使用AI辅助理解或排错。使用时记录问题、关键建议、本人修改和验证结果；未使用则如实填写。不以是否使用AI加减分。</p>
+    <dl>
+      <dt>文档与标题结构 10分</dt><dd>骨架、编码、标题与语言4分；<code>&lt;h1&gt;</code>及<code>&lt;h2&gt;</code>层级6分。</dd>
+      <dt>文本与段落 15分</dt><dd>两段正文3分；<code>&lt;strong&gt;</code>与<code>&lt;em&gt;</code>各2分；<code>&lt;br&gt;</code>与<code>&lt;hr&gt;</code>各1分；上下标各3分。</dd>
+      <dt>预格式化与转义 10分</dt><dd>缩进4分；转义3分；空白对照记录3分。</dd>
+      <dt>三类列表与嵌套 20分</dt><dd><code>&lt;ul&gt;</code>与<code>&lt;ol&gt;</code>各4分；<code>&lt;dl&gt;</code> 5分；嵌套4分；选择理由3分。</dd>
+      <dt>图片与超链接 15分</dt><dd>图片、相对路径与alt共5分；署名及许可3分；外部链接3分；页内跳转4分。</dd>
+      <dt>验证与纠错 20分</dt><dd>编号预测实测8分；两处结构纠错与解释各6分。</dd>
+      <dt>提交与独立说明 10分</dt><dd>源码、图片及截图4分；报告真实3分；解释本人修改3分。</dd>
+    </dl>
+    <p>选做：调整CSS列表符号；用<code>&lt;del&gt;</code>与<code>&lt;ins&gt;</code>记录文字修订。思考：<code>&lt;p&gt;</code>与<code>&lt;br&gt;</code>有什么区别？<code>&lt;strong&gt;</code>与<code>&lt;b&gt;</code>为什么不能仅按视觉效果区分？</p>
+    <hr>
+
+    <h2 id="tags">附录 标签与英文名称</h2>
+    <p>英文列区分缩写、完整单词和记忆名称。正文用HTML语义组织，CSS只负责基础显示。</p>
+    <table>
+      <caption>本节课标签速查</caption>
+      <thead>
+        <tr>
+          <th scope="col">标签</th>
+          <th scope="col">英文全称或名称</th>
+          <th scope="col">含义与使用注意</th>
+          <th scope="col">简短示例</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td><code>&lt;html&gt;</code></td>
+            <td>HyperText Markup Language<br>超文本标记语言（缩写）</td>
+            <td>HTML文档的根元素；lang声明页面主要语言。</td>
+            <td>&lt;html lang=&quot;zh-CN&quot;&gt;…&lt;/html&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;head&gt;</code></td>
+            <td>head<br>头部（完整单词）</td>
+            <td>存放标题、编码、样式引用等元信息。</td>
+            <td>&lt;head&gt;…&lt;/head&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;meta&gt;</code></td>
+            <td>metadata<br>元数据（缩略形式）</td>
+            <td>声明元信息；本实验设置UTF-8编码和视口。空元素，无结束标签。</td>
+            <td>&lt;meta charset=&quot;utf-8&quot;&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;title&gt;</code></td>
+            <td>title<br>标题（完整单词）</td>
+            <td>浏览器标签页中的文档标题，不是正文标题。</td>
+            <td>&lt;title&gt;黄梅戏介绍&lt;/title&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;link&gt;</code></td>
+            <td>link<br>链接（完整单词）</td>
+            <td>引用外部资源；本实验连接CSS文件。空元素。</td>
+            <td>&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;body&gt;</code></td>
+            <td>body<br>主体（完整单词）</td>
+            <td>包含网页向读者呈现的主要内容。</td>
+            <td>&lt;body&gt;…&lt;/body&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code></td>
+            <td>heading 1–6<br>第1至第6级标题</td>
+            <td>六级标题，数字越大层级越低。按内容层级选用，不按字号选用。</td>
+            <td>&lt;h1&gt;走近黄梅戏&lt;/h1&gt;<br>&lt;h2&gt;代表剧目&lt;/h2&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;p&gt;</code></td>
+            <td>paragraph<br>段落（缩写）</td>
+            <td>表示一个段落；普通段落中的连续空格通常会折叠。</td>
+            <td>&lt;p&gt;黄梅戏具有地方特色。&lt;/p&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;br&gt;</code></td>
+            <td>line break<br>换行（记忆释义）</td>
+            <td>同一文本块中有意义的换行；不用于制造段落间距。空元素。</td>
+            <td>资料来源：非遗网&lt;br&gt;整理者：张明</td>
+          </tr>
+          <tr>
+            <td><code>&lt;hr&gt;</code></td>
+            <td>horizontal rule<br>水平分隔线（传统名称）</td>
+            <td>段落级主题转换，通常显示为分隔线。空元素。</td>
+            <td>&lt;p&gt;概况&lt;/p&gt;&lt;hr&gt;&lt;p&gt;详细介绍&lt;/p&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;strong&gt;</code></td>
+            <td>strong<br>强烈的（完整单词）</td>
+            <td>表示重要、严肃或紧迫的内容，通常以粗体显示。</td>
+            <td>&lt;strong&gt;请核对资料来源。&lt;/strong&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;em&gt;</code></td>
+            <td>emphasis<br>强调（缩写）</td>
+            <td>表示语气强调，通常以斜体显示。</td>
+            <td>&lt;em&gt;先理解情境&lt;/em&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;sup&gt;</code> / <code>&lt;sub&gt;</code></td>
+            <td>superscript / subscript<br>上标 / 下标（缩写）</td>
+            <td><code>&lt;sup&gt;</code>表示上标，<code>&lt;sub&gt;</code>表示下标；用于确实需要上下标的内容。</td>
+            <td>资料&lt;sup&gt;[1]&lt;/sup&gt;<br>x&lt;sub&gt;1&lt;/sub&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ul&gt;</code></td>
+            <td>unordered list<br>无序列表（缩写）</td>
+            <td>无序列表：用于没有固定先后顺序的并列事项。</td>
+            <td>&lt;ul&gt;&lt;li&gt;《天仙配》&lt;/li&gt;&lt;/ul&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;ol&gt;</code></td>
+            <td>ordered list<br>有序列表（缩写）</td>
+            <td>有序列表：用于有先后顺序的步骤或排名。</td>
+            <td>&lt;ol&gt;&lt;li&gt;查阅资料&lt;/li&gt;&lt;/ol&gt;</td>
+          </tr>
+          <tr>
+            <td>li</td>
+            <td>list item<br>列表项（缩写）</td>
+            <td>列表项，放在<code>&lt;ul&gt;</code>或<code>&lt;ol&gt;</code>内；子列表应放在所属li内。</td>
+            <td>&lt;li&gt;剧目&lt;ul&gt;&lt;li&gt;欣赏要点&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;dl&gt;</code></td>
+            <td>description list<br>描述列表；旧称definition list</td>
+            <td>描述列表，表达名称与说明之间的关联。</td>
+            <td>&lt;dl&gt;&lt;dt&gt;唱腔&lt;/dt&gt;&lt;dd&gt;演唱的曲调表达&lt;/dd&gt;&lt;/dl&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;dt&gt;</code></td>
+            <td>description term<br>描述项名称（记忆释义）</td>
+            <td>描述列表中的名称或术语；本实验直接放在<code>&lt;dl&gt;</code>内。</td>
+            <td>&lt;dt&gt;念白&lt;/dt&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;dd&gt;</code></td>
+            <td>description details<br>描述详情（记忆释义）</td>
+            <td>对应术语的说明；本实验与<code>&lt;dt&gt;</code>并列，不能写进<code>&lt;dt&gt;</code>。</td>
+            <td>&lt;dd&gt;戏曲人物的说白。&lt;/dd&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;pre&gt;</code></td>
+            <td>preformatted text<br>预格式化文本</td>
+            <td>预格式化文本，默认保留空格和换行；其中仍会解析HTML。</td>
+            <td>&lt;pre&gt;剧目    类型<br>天仙配  黄梅戏&lt;/pre&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;code&gt;</code></td>
+            <td>code<br>代码（完整单词）</td>
+            <td>表示一段计算机代码；多行源码通常与<code>&lt;pre&gt;</code>配合。</td>
+            <td>&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;介绍&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/pre&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;a&gt;</code></td>
+            <td>anchor<br>锚（缩写）</td>
+            <td>超链接，href指定目标网页或本地文件。</td>
+            <td>&lt;a href=&quot;checks.html&quot;&gt;验证页&lt;/a&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;b&gt;</code> / <code>&lt;i&gt;</code></td>
+            <td>bold / italic<br>粗体 / 斜体（传统名称）</td>
+            <td><code>&lt;b&gt;</code>吸引注意但不增加重要性；<code>&lt;i&gt;</code>表示不同语态，如术语或异语。不能只按粗体、斜体外观选标签。</td>
+            <td>&lt;b&gt;关键词&lt;/b&gt;<br>&lt;i lang=&quot;en&quot;&gt;HTML&lt;/i&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;del&gt;</code> / <code>&lt;ins&gt;</code></td>
+            <td>deleted / inserted text<br>删除 / 插入的文本</td>
+            <td>表示删除、插入的内容；适用于记录文字修订，属选做。</td>
+            <td>&lt;del&gt;旧介绍&lt;/del&gt;&lt;ins&gt;新介绍&lt;/ins&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;img&gt;</code></td>
+            <td>image 图片</td>
+            <td>插入图片，无结束标签；使用src和alt。</td>
+            <td>&lt;img src=&quot;images/huangmei-stage.jpg&quot; alt=&quot;黄梅戏演出人物&quot;&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;figure&gt;</code></td>
+            <td>figure 图或独立内容</td>
+            <td>将图片与说明组合为独立内容。</td>
+            <td>&lt;figure&gt;图片及图注&lt;/figure&gt;</td>
+          </tr>
+          <tr>
+            <td><code>&lt;figcaption&gt;</code></td>
+            <td>figure caption 图注</td>
+            <td>在<code>&lt;figure&gt;</code>内说明图片及其来源。</td>
+            <td>&lt;figcaption&gt;作者及来源&lt;/figcaption&gt;</td>
+          </tr>
+      </tbody>
+    </table>
+    <h3>属性与字符引用</h3>
+    <dl>
+      <dt>src — source</dt><dd>图片来源地址。示例：src="images/huangmei-stage.jpg"。</dd>
+      <dt>alt — alternative text</dt><dd>替代文本，简洁说明图片表达的内容。</dd>
+      <dt>href — hypertext reference</dt><dd>链接目标，可以是外部地址、本地文件或#栏目id。</dd>
+      <dt>id — identifier</dt><dd>元素标识，同一页面中必须唯一。</dd>
+      <dt>start / value / type</dt><dd>有序列表的起始序数、列表项序数和编号形式，均为属性。</dd>
+    </dl>
+    <p><code>&lt;!doctype html&gt;</code>是文档类型声明。<code>&amp;lt;</code>显示“&lt;”，<code>&amp;gt;</code>显示“&gt;”，<code>&amp;amp;</code>显示“&amp;”；这些是字符引用，不是标签。</p>
+    <p>不使用<code>&lt;font&gt;</code>、<code>&lt;center&gt;</code>或align等旧式表现写法；字体、颜色和对齐交给CSS。</p>
+    <p>[1] 文化资料来源：中国非物质文化遗产网《黄梅戏》。图片作者与许可见图注。</p>
+    <p><a href="#top">返回任务书顶部</a></p>
+  </body>
+</html>
