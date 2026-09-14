@@ -196,13 +196,40 @@
     <h3>4. 两处列表错误的修复</h3>
     <p>填写提示：分别记录子列表位置错误、&lt;dd&gt;写入&lt;dt&gt;的问题。每处均给出修改前后代码及理由。</p>
     <h4>错误一</h4>
-    <pre><code>待填写：修改前的代码。</code></pre>
-    <pre><code>待填写：修改后的代码。</code></pre>
-    <p>修复理由：待填写。</p>
+    <pre><code>
+      &lt;ul&gt;
+        &lt;li&gt;《天仙配》欣赏要点&lt;/li&gt;
+        &lt;ul&gt;
+          &lt;li&gt;人物关系&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/ul&gt;
+    </code></pre>
+
+    <pre><code>
+      &lt;ul&gt;
+        &lt;li&gt;《天仙配》欣赏要点
+          &lt;ul&gt;
+            &lt;li&gt;人物关系&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+   </code></pre>
+
+    <p>修复理由：修复理由：HTML规定&lt;ul&gt;的直接子元素只能是&lt;li&gt;。原代码将子&lt;ul&gt;直接放在外层&lt;ul&gt;下，属于非法嵌套；修改后把子列表移入&lt;li&gt;标签内部，符合列表嵌套语法规范。</p>
     <h4>错误二</h4>
-    <pre><code>待填写：修改前的代码。</code></pre>
-    <pre><code>待填写：修改后的代码。</code></pre>
-    <p>修复理由：待填写。</p>
+    <pre><code>
+      &lt;dl&gt;
+        &lt;dt&gt;唱腔&lt;dd&gt;戏曲演唱的曲调表达&lt;/dd&gt;&lt;/dt&gt;
+      &lt;/dl&gt;
+    </code></pre>
+    <pre><code>
+      &lt;dl&gt;
+        &lt;dt&gt;唱腔&lt;/dt&gt;
+        &lt;dd&gt;戏曲演唱的曲调表达&lt;/dd&gt;
+      &lt;/dl&gt;
+    </code></pre>
+    <p>修复理由：修复理由：&lt;dt&gt;与&lt;dd&gt;是同级兄弟标签，不能互相嵌套。原代码将&lt;dd&gt;写在&lt;dt&gt;标签内部，HTML结构非法；修改后把&lt;dt&gt;和&lt;dd&gt;改为同级节点，符合定义列表&lt;dl&gt;的语法规范。</p>
+
     <h3>5. 图片与链接验证</h3>
     <ul>
       <li>本地图片：待填写实际文件名、加载情况、比例、alt和署名检查结果。</li>
