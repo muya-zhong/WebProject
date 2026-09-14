@@ -48,3 +48,7 @@ figcaption {
   font-size: 14px;
   overflow-wrap: anywhere;
 }
+
+p {
+    text-indent: 2em; 
+}
