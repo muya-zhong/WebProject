@@ -127,7 +127,7 @@
       <dt>学生信息</dt>
       <dd>姓名：钟沐雅；学号：07122575；班级：大数据1班。</dd>
       <dt>实验日期与节次</dt>
-      <dd>待填写：2026年9月10日，上午第2节。</dd>
+      <dd>2026年9月10日，上午第2节。</dd>
       <dt>实验地点</dt>
       <dd>L214。</dd>
     </dl>
@@ -157,9 +157,23 @@
     <h2>四、实验步骤</h2>
     <p>填写提示：按本人实际操作顺序记录，说明修改位置、所用标签以及修改目的。</p>
     <ol>
-      <li>待填写：建立项目，设置页面标题与基本结构。</li>
-      <li>待填写：组织文字与列表，插入图片和超链接。</li>
-      <li>待填写：完成对照实验和纠错，检查并保存结果。</li>
+      <li>建立项目，设置页面标题与基本结构。</li>
+      <p>在本地新建 WebProject 项目文件夹，创建`index.html`文件；书写基础 HTML 骨架`&lt;!doctype html&gt;`、`&lt;html&gt;`、`&lt;head&gt;`、`&lt;body&gt;`。在`&lt;head&gt;`中设置`&lt;meta charset&gt;`编码、视口 meta 标签，`&lt;title&gt;`设置页面标题为**黄梅戏介绍**，引入外部 CSS 样式文件，搭建网页基础文档结构。</p>
+      <li>组织文字与列表，插入图片和超链接。</li>
+        <ul>
+          <li>编写`&lt;h1&gt;`主标题，`&lt;hr&gt;`水平分割线；添加页内锚点`&lt;a&gt;`链接，实现页面内跳转；</li>
+          <li>使用`&lt;p&gt;`段落标签书写黄梅戏介绍文本，使用`&lt;strong&gt;`加粗、`&lt;em&gt;`斜体、`&lt;br&gt;`换行、`&lt;sup&gt;`上标引用标记；</li>
+          <li>插入`&lt;figure&gt;`、`&lt;img&gt;`图片标签，设置`src`本地图片路径、`alt`替代文本，`&lt;figcaption&gt;`添加图片版权来源；</li>
+          <li>使用`&lt;ul&gt;`无序列表编写黄梅戏剧目，嵌套子`&lt;ul&gt;`写剧目核心唱段；`&lt;ol&gt;`有序列表编写入门欣赏步骤；`&lt;dl&gt;`定义列表，搭配`&lt;dt&gt;`术语、`&lt;dd&gt;`术语解释；</li>
+          <li>添加`&lt;pre&gt;`与`&lt;code&gt;`标签，转义 HTML 特殊字符，展示 HTML 源码片段；</li>
+          <li>增加返回顶部锚点链接`&lt;a href="#top"&gt;`。</li>
+        </ul>
+      <li>
+        <ul>
+          <li>错误一：ul 嵌套列表语法错误，子 ul 不能直接作为 ul 的子元素，子 ul 必须放在父 li 标签内部。<br>修改：将子`&lt;ul&gt;`移入外层`&lt;li&gt;`标签内，在`&lt;/li&gt;`之前。</li>
+          <li>错误二：dl 定义列表标签嵌套错误，`&lt;dd&gt;`不能放在`&lt;dt&gt;`内部，dt 和 dd 是平级标签。<br>修改：闭合`&lt;dt&gt;`，`&lt;dd&gt;`写在`&lt;dt&gt;`之后，二者同级。</li>
+        </ul>
+      </li>
     </ol>
     <h3>关键代码与说明</h3>
     <p>待填写：选取本人编写的关键代码并解释标签和属性的作用。代码中的小于号写为&amp;lt;，大于号写为&amp;gt;，与号写为&amp;amp;。</p>
@@ -173,15 +187,18 @@
 
     <h2>五、实验结果记录及分析</h2>
     <h3>1. 页面截图</h3>
-    <p>待填写：插入本人页面截图，说明截图展示了哪些实验要求。</p>
-    <p>填写提示：将截图保存为screenshots/page.png，再取消下方图片代码的注释；需要更多截图时复制该段并修改文件名与说明。</p>
-    <!-- 保存真实截图后，删除下面一对注释符号，启用图片。不要提交他人的截图。 -->
-    <!--
     <figure>
-      <img src="screenshots/page.png" alt="本人完成的黄梅戏介绍页截图">
-      <figcaption>图1 黄梅戏介绍页。待填写：本图展示的内容。</figcaption>
+      <img src="screenshots/page_1.png" alt="黄梅戏介绍页截图1">
+      <figcaption>黄梅戏介绍页截图1：展示页面标题、导航与黄梅戏简介段落。</figcaption>
     </figure>
-    -->
+    <figure>
+      <img src="screenshots/page_2.png" alt="黄梅戏介绍页截图2">
+      <figcaption>黄梅戏介绍页截图2：展示代表剧目、入门欣赏步骤列表。</figcaption>
+    </figure>
+    <figure>
+      <img src="screenshots/page_3.png" alt="黄梅戏介绍页截图3">
+      <figcaption>黄梅戏介绍页截图3：展示戏曲术语、代码摘录与返回顶部链接。</figcaption>
+    </figure>
 
     <h3>2. 空白与换行对照</h3>
     <dl>
