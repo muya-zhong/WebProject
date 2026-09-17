@@ -1,0 +1,94 @@
+body {
+  max-width: 1040px;
+  margin: 32px auto;
+  padding: 0 24px;
+  background: #fffdf8;
+  color: #292624;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+}
+h1, h2, h3 {
+  color: #782d2b;
+  line-height: 1.4;
+}
+h2 {
+  margin-top: 32px;
+}
+a {
+  color: #8a302a;
+  overflow-wrap: anywhere;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 20px 0;
+}
+figcaption, .note {
+  color: #62544e;
+}
+.table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.table-scroll:focus {
+  outline: 3px solid #8a302a;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+.products {
+  min-width: 760px;
+}
+caption {
+  font-weight: bold;
+  text-align: left;
+}
+th, td {
+  border: 1px solid #b8aaa0;
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+thead, tfoot {
+  background: #f1e5d9;
+}
+tbody tr:nth-child(even) {
+  background: #faf4ed;
+}
+.stock-low {
+  color: #9a251c;
+  font-weight: bold;
+}
+pre {
+  overflow-x: auto;
+  padding: 16px;
+  background: #f2ece4;
+}
+code {
+  font-family: Consolas, monospace;
+}
+li {
+  margin-bottom: 6px;
+}
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-size: 11pt;
+  }
+  .products {
+    min-width: 0;
+  }
+  .table-scroll, pre {
+    overflow: visible;
+  }
+  pre {
+    white-space: pre-wrap;
+  }
+}

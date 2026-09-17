@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>黄梅戏文创商城 · 待完成</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .task-hint {
+        margin: 8px 0;
+        padding: 8px 12px;
+        border-left: 3px solid #b8aaa0;
+        background: #faf4ed;
+        color: #62544e;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="top">黄梅戏文创商城</h1>
+    <p>从一份书签、一张明信片开始，把戏曲主题带入日常阅读与记录。</p>
+    <p><strong>教学模拟：</strong>本页商品、价格、库存和评分均为虚构，无购买或支付功能。</p>
+    <p><a href="#goods">比较商品</a> · <a href="#details">阅读商品说明</a></p>
+    <figure>
+      <img src="images/huangmei-stage.jpg" alt="两位身穿戏装的黄梅戏演出人物" width="240">
+      <figcaption>文化背景配图，非商品实物图。摄影：Lavastyle；<a href="https://commons.wikimedia.org/wiki/File:HuangmeiOpera.jpg">来源</a>；<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>。</figcaption>
+    </figure>
+    <h2 id="goods">商品比较</h2>
+    <p class="task-hint">T1 表头：补齐两行表头。源码搜索 BEGIN PRODUCT-HEAD。</p>
+    <p>小屏幕可左右滚动表格；也可用Tab聚焦表格区域后按左右方向键。</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="商品比较表，可左右滚动">
+      <table class="products">
+        <caption>黄梅戏文创商品比较表（教学虚构数据）</caption>
+        <colgroup span="1"></colgroup>
+        <colgroup span="3"></colgroup>
+        <colgroup span="1"></colgroup>
+        <colgroup span="1"></colgroup>
+        <thead>
+          <!-- BEGIN PRODUCT-HEAD | T1：编写两行表头；完成标准见任务书T1。 -->
+          <!-- END PRODUCT-HEAD -->
+        </thead>
+        <tbody>
+          <!-- BEGIN PRODUCT-ROWS | T2初始6行；T5更新为7行。保留并参考书签行。 -->
+          <tr>
+            <th scope="row">戏曲书签套装</th>
+            <td>18.00</td>
+            <td>36（有货）</td>
+            <td>4.8</td>
+            <td>普通快递</td>
+            <td><a href="#bookmarks">查看戏曲书签套装说明</a></td>
+          </tr>
+          <!-- END PRODUCT-ROWS -->
+        </tbody>
+        <!-- BEGIN PRODUCT-FOOT | T3添加tfoot汇总；T5修改汇总。 -->
+        <!-- END PRODUCT-FOOT -->
+      </table>
+    </div>
+    <p class="task-hint">T2／T5 商品行：先补齐6种，再更新为7种。源码搜索 BEGIN PRODUCT-ROWS。</p>
+    <p class="task-hint">T3／T5 表尾：填写并更新库存汇总。源码搜索 BEGIN PRODUCT-FOOT。</p>
+    <h2 id="activities">文创体验活动安排</h2>
+    <p class="task-hint">T4 活动表：独立制作4列、6条活动的表格。源码搜索 BEGIN ACTIVITY-TABLE。</p>
+    <!-- BEGIN ACTIVITY-TABLE | T4：独立编写4列活动表及滚动容器。 -->
+    <!-- END ACTIVITY-TABLE -->
+    <h2 id="details">商品说明</h2>
+    <h3 id="bookmarks">戏曲书签套装</h3>
+    <p>六枚一组，采用戏曲舞台与文字构图的设计设想，便于阅读时标记页码。</p>
+    <h3 id="postcards">黄梅戏明信片</h3>
+    <p>四张一组，用于书写观演感想或向朋友介绍喜爱的剧目。</p>
+    <h3 id="bag">戏曲帆布袋</h3>
+    <p>日常收纳用品，以戏曲主题文字作为图案设计设想。</p>
+    <h3 id="notebook">舞台笔记本</h3>
+    <p>用于记录人物关系、唱词理解和课堂学习笔记。</p>
+    <h3 id="stickers">剧目贴纸包</h3>
+    <p>用于装饰笔记本封面，图案设想包含幕布、舞台和剧目名称。</p>
+    <h3 id="badge">戏曲纪念徽章</h3>
+    <p>小型纪念配饰，可用于校园戏曲主题活动的设计练习。</p>
+    <p class="task-hint">T5 商品说明：新增“戏曲文件夹”标题及说明。源码搜索 BEGIN NEW-DETAIL。</p>
+    <!-- BEGIN NEW-DETAIL | T5：新增文件夹h3与p，标题id为folder。 -->
+    <!-- END NEW-DETAIL -->
+    <p><a href="#top">返回顶部</a></p>
+
+
+  </body>
+</html>
