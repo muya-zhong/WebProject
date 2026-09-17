@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>黄梅戏文创商城 · 待完成</title>
+    <title>黄梅戏文创商城</title>
     <link rel="stylesheet" href="styles.css">
     <style>
       .task-hint {
@@ -26,6 +26,7 @@
       <img src="images/huangmei-stage.jpg" alt="两位身穿戏装的黄梅戏演出人物" width="240">
       <figcaption>文化背景配图，非商品实物图。摄影：Lavastyle；<a href="https://commons.wikimedia.org/wiki/File:HuangmeiOpera.jpg">来源</a>；<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>。</figcaption>
     </figure>
+
     <h2 id="goods">商品比较</h2>
     <p class="task-hint">T1 表头：补齐两行表头。源码搜索 BEGIN PRODUCT-HEAD。</p>
     <p>小屏幕可左右滚动表格；也可用Tab聚焦表格区域后按左右方向键。</p>
@@ -37,6 +38,17 @@
         <colgroup span="1"></colgroup>
         <colgroup span="1"></colgroup>
         <thead>
+          <tr>
+            <th rowspan="2">商品</th>
+            <th colspan="3">商品数据</th>
+            <th rowspan="2">配送</th>
+            <th rowspan="2">操作</th>
+          </tr>
+          <tr>
+            <th>价格（元）</td>
+            <th>库存（件）</td>
+            <th>评分（5分制）</td>
+          </tr>
           <!-- BEGIN PRODUCT-HEAD | T1：编写两行表头；完成标准见任务书T1。 -->
           <!-- END PRODUCT-HEAD -->
         </thead>
@@ -50,9 +62,65 @@
             <td>普通快递</td>
             <td><a href="#bookmarks">查看戏曲书签套装说明</a></td>
           </tr>
+           <tr>
+            <th scope="row">黄梅戏明信片</th>
+            <td>12.00</td>
+            <td>8（库存紧张）</td>
+            <td>4.6</td>
+            <td>普通快递</td>
+            <td><a href="#postcards">查看黄梅戏明信片说明</a></td>
+          </tr>
+          <tr>
+            <th scope="row">戏曲帆布袋（推荐）</th>
+            <td>39.00</td>
+            <td>15（有货）</td>
+            <td>4.9</td>
+            <td>普通快递</td>
+            <td><a href="#bag">查看戏曲帆布袋说明</a></td>
+          </tr>
+          <tr>
+            <th scope="row">舞台笔记本</th>
+            <td>25.00</td>
+            <td>0（暂时缺货）</td>
+            <td>4.7</td>
+            <td>到货后寄送</td>
+            <td><a href="#notebook">查看舞台笔记本说明</a></td>
+          </tr>
+          <tr>
+            <th scope="row">剧目贴纸包</th>
+            <td>9.90</td>
+            <td>52（有货）</td>
+            <td>4.5</td>
+            <td>普通快递</td>
+            <td><a href="#stickers">查看剧目贴纸包说明</a></td>
+          </tr>
+          <tr>
+            <th scope="row">戏曲纪念徽章</th>
+            <td>16.00</td>
+            <td>6（库存紧张）</td>
+            <td>4.8</td>
+            <td>普通快递</td>
+            <td><a href="#badge">查看剧目贴纸包说明</a></td>
+          </tr>
+          <tr>
+            <th scope="row">戏曲文件夹</th>
+            <td>15.00</td>
+            <td>10（有货）</td>
+            <td>4.8</td>
+            <td>普通快递</td>
+            <td><a href="#folder">查看戏曲文件夹说明</a></td>
+          </tr>
           <!-- END PRODUCT-ROWS -->
         </tbody>
+
         <!-- BEGIN PRODUCT-FOOT | T3添加tfoot汇总；T5修改汇总。 -->
+        
+        <tfoot>
+          <tr>
+            <td colspan="6">共7种商品；库存合计127件。</td>
+          </tr>
+        </tfoot>
+
         <!-- END PRODUCT-FOOT -->
       </table>
     </div>
@@ -60,6 +128,10 @@
     <p class="task-hint">T3／T5 表尾：填写并更新库存汇总。源码搜索 BEGIN PRODUCT-FOOT。</p>
     <h2 id="activities">文创体验活动安排</h2>
     <p class="task-hint">T4 活动表：独立制作4列、6条活动的表格。源码搜索 BEGIN ACTIVITY-TABLE。</p>
+    <table>
+      
+    </table>
+
     <!-- BEGIN ACTIVITY-TABLE | T4：独立编写4列活动表及滚动容器。 -->
     <!-- END ACTIVITY-TABLE -->
     <h2 id="details">商品说明</h2>
