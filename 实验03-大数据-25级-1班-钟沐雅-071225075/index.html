@@ -133,6 +133,62 @@
     </table>
 
     <!-- BEGIN ACTIVITY-TABLE | T4：独立编写4列活动表及滚动容器。 -->
+    <div class="table-scroll" tabindex="0" role="region" aria-label="文化活动安排，可左右滚动">
+      <table>
+        <thead>
+          <tr>
+            <th>时段</th>
+            <th>活动</th>
+            <th>地点</th>
+            <th>名额</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="2scope=rowgroup">09:00-09:40</th>
+            <td>戏曲书签设计</td>
+            <td>创作区</td>
+            <td>12人</td>
+          </tr>
+          <tr>
+            <td>剧目明信片绘制</td>
+            <td>绘画区</td>
+            <td>16人</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th rowspan="2scope=rowgroup">10:00-10:40</th>
+            <td>唱词阅读分享</td>
+            <td>阅读区</td>
+            <td>20人</td>
+          </tr>
+          <tr>
+            <td>舞台动作观察</td>
+            <td>体验区</td>
+            <td>18人</td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th rowspan="2" scope="rowgroup">14:00-14:40</th>
+            <td>文创图案讨论</td>
+            <td>创作区</td>
+            <td>15人</td>
+          </tr>
+          <tr>
+            <td>观演笔记交流</td>
+            <td>阅读区</td>
+            <td>16人</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4">活动为教学虚构，名额仅用于表格练习。</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
     <!-- END ACTIVITY-TABLE -->
     <h2 id="details">商品说明</h2>
     <h3 id="bookmarks">戏曲书签套装</h3>
@@ -149,6 +205,7 @@
     <p>小型纪念配饰，可用于校园戏曲主题活动的设计练习。</p>
     <p class="task-hint">T5 商品说明：新增“戏曲文件夹”标题及说明。源码搜索 BEGIN NEW-DETAIL。</p>
     <!-- BEGIN NEW-DETAIL | T5：新增文件夹h3与p，标题id为folder。 -->
+    <p></p>
     <!-- END NEW-DETAIL -->
     <p><a href="#top">返回顶部</a></p>
 
