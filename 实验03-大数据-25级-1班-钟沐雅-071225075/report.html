@@ -32,15 +32,104 @@
     <dl>
       <dt>商品表头行列关系（T1）</dt><dd>第一行实际有4个单元格，第二行有3个，虽然看着4个和3个，但colspan本身就表示跨越的列数，只是将几列合并。</dd>
       <dt id="R1">R1 数据更新（T3、T5）</dt><dd>更新前后商品种类由6种增加到7种，原合计36+8+15+0+52+6=117件，现有合计36+8+15+0+52+6+10=127件。戏曲笔记本库存为10件，用普通快递。</dd>
-      <dt id="R2">R2 活动表与合并关系（T4）</dt><dd>待填写：解释时段跨行、tbody分组和备注跨列，核对六条活动与四列。</dd>
-      <dt id="R3">R3 验证记录（T6）</dt><dd>待填写：逐项记录：①两表数据与行列是否正确；②7个详情链接是否到达对应标题；③商品表与活动表在约390像素视口下是否分别能滚到最右列；④Tab聚焦后方向键能否滚动；⑤发现问题后的修改与复查结果。</dd>
-      <dt>问题与处理</dt><dd>待填写：一个实际问题、修改及复查；未出现问题则解释一处结构为何正确。</dd>
+      <dt id="R2">R2 活动表与合并关系（T4）</dt><dd>每个时段的表头单元格利用`rowspan="2"`实现纵向跨行，搭配`scope="rowgroup"`完成无障碍声明。三个时段各自放在独立的`&lt;tbody&gt;`行组当中，不在不同 tbody 之间做单元格合并。底部`&lt;tfoot&gt;`借助`colspan="4"`实现备注横向跨列，经核对共 6 条活动数据，四列表格与素材一致。</dd>
+      <dt id="R3">R3 验证记录（T6）</dt><dd>逐项记录：①两表数据与行列确认正确；②7个详情链接正常到达对应标题；③商品表与活动表在约390像素视口下可以滚到最右列；④Tab聚焦后方向键能滚动；⑤发现问题后的修改与复查结果。</dd>
+      <dt>问题与处理</dt><dd>1. 商品复合表头错误：子表头开始标签为`&lt;th&gt;`，错误使用`&lt;/td&gt;`闭合；改正：统一使用`&lt;/th&gt;`结束表头单元格。2. 活动表时段表头属性粘连：`&lt;th rowspan="2scope=rowgroup">`缺少空格；改正：属性间增加空格，写为`&lt;th rowspan="2" scope="rowgroup"&gt;`。
+
+
+今天 21:33</dd>
     </dl>
     <p>选取本人一处合并代码，替换紧接本段的&lt;pre&gt;&lt;code&gt;内容；代码中的&lt;和&gt;分别写为&amp;lt;与&amp;gt;。</p>
-    <pre><code>待填写：关键代码，不必粘贴整个页面。</code></pre>
+    <pre><code>
+      &lt;div class="table-scroll" tabindex="0" role="region" aria-label="商品比较表，可左右滚动"&gt;
+        &lt;table class="products"&gt;
+          &lt;caption&gt;黄梅戏文创商品比较表（教学虚构数据）&lt;/caption&gt;
+          &lt;colgroup span="1"&gt;&lt;/colgroup&gt;
+          &lt;colgroup span="3"&gt;&lt;/colgroup&gt;
+          &lt;colgroup span="1"&gt;&lt;/colgroup&gt;
+          &lt;colgroup span="1"&gt;&lt;/colgroup&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;
+              &lt;th rowspan="2"&gt;商品&lt;/th&gt;
+              &lt;th colspan="3"&gt;商品数据&lt;/th&gt;
+              &lt;th rowspan="2"&gt;配送&lt;/th&gt;
+              &lt;th rowspan="2"&gt;操作&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th&gt;价格（元）&lt;/th&gt;
+              &lt;th&gt;库存（件）&lt;/th&gt;
+              &lt;th&gt;评分（5分制）&lt;/th&gt;
+            &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;戏曲书签套装&lt;/th&gt;
+              &lt;td&gt;18.00&lt;/td&gt;
+              &lt;td&gt;36（有货）&lt;/td&gt;
+              &lt;td&gt;4.8&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#bookmarks"&gt;查看戏曲书签套装说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;黄梅戏明信片&lt;/th&gt;
+              &lt;td&gt;12.00&lt;/td&gt;
+              &lt;td&gt;8（库存紧张）&lt;/td&gt;
+              &lt;td&gt;4.6&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#postcards"&gt;查看黄梅戏明信片说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;戏曲帆布袋（推荐）&lt;/th&gt;
+              &lt;td&gt;39.00&lt;/td&gt;
+              &lt;td&gt;15（有货）&lt;/td&gt;
+              &lt;td&gt;4.9&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#bag"&gt;查看戏曲帆布袋说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;舞台笔记本&lt;/th&gt;
+              &lt;td&gt;25.00&lt;/td&gt;
+              &lt;td&gt;0（暂时缺货）&lt;/td&gt;
+              &lt;td&gt;4.7&lt;/td&gt;
+              &lt;td&gt;到货后寄送&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#notebook"&gt;查看舞台笔记本说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;剧目贴纸包&lt;/th&gt;
+              &lt;td&gt;9.90&lt;/td&gt;
+              &lt;td&gt;52（有货）&lt;/td&gt;
+              &lt;td&gt;4.5&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#stickers"&gt;查看剧目贴纸包说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;戏曲纪念徽章&lt;/th&gt;
+              &lt;td&gt;16.00&lt;/td&gt;
+              &lt;td&gt;6（库存紧张）&lt;/td&gt;
+              &lt;td&gt;4.8&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#badge"&gt;查看剧目贴纸包说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;th scope="row"&gt;戏曲文件夹&lt;/th&gt;
+              &lt;td&gt;15.00&lt;/td&gt;
+              &lt;td&gt;10（有货）&lt;/td&gt;
+              &lt;td&gt;4.8&lt;/td&gt;
+              &lt;td&gt;普通快递&lt;/td&gt;
+              &lt;td&gt;&lt;a href="#folder"&gt;查看戏曲文件夹说明&lt;/a&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+          &lt;tfoot&gt;
+            &lt;tr&gt;
+              &lt;td colspan="6"&gt;共7种商品；库存合计127件。&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tfoot&gt;
+        &lt;/table&gt;
+      &lt;/div&gt;
+    </code></pre>
     <h3 id="R4">R4 提交证据（T7） · 截图1 桌面商品表与活动表</h3>
     <p>桌面截图需覆盖两张表，较长时可分图并自行添加图片标签。保存为screenshots/desktop.png后，取消下面图片代码的注释。</p>
-    <!-- <img src="screenshots/desktop.png" alt="本人完成的桌面商品表与活动表截图"> -->
+    <img src="screenshots/desktop.png" alt="本人完成的桌面商品表与活动表截图"> 
     <h3>截图2 窄屏右侧操作列</h3>
     <p>保存为screenshots/mobile.png后，取消下面图片代码的注释。</p>
     <!-- <img src="screenshots/mobile.png" alt="窄屏横向滚动至操作列的截图"> -->
