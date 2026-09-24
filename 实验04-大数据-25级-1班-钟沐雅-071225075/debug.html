@@ -14,15 +14,15 @@
     <p class="task-hint">T4：在 BEGIN REPAIR 区域排查3处错误，逐一记录现象、原因、修改和复查。</p>
     <form>
       <!-- BEGIN REPAIR -->
-      <label for="visitor-name">体验者姓名</label>
+      <label for="visitor">体验者姓名</label>
       <input id="visitor" name="visitor" required>
       <fieldset>
         <legend>选择一个体验场次</legend>
-        <label><input type="radio" name="morning" value="morning" checked>上午</label>
-        <label><input type="radio" name="afternoon" value="afternoon">下午</label>
+        <label><input type="radio" name="session" value="morning" checked>上午</label>
+        <label><input type="radio" name="session" value="afternoon">下午</label>
       </fieldset>
       <label for="contact">联系邮箱</label>
-      <input id="contact" name="email" type="text" required>
+      <input id="contact" name="email" type="email" required>
       <!-- END REPAIR -->
       <button type="submit">检查输入</button>
       <button type="reset">恢复默认</button>
