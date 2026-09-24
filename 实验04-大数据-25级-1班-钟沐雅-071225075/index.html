@@ -25,6 +25,20 @@
       </p>
       <!-- BEGIN FILTERS -->
       <!-- TODO：剧目 name="play"；票价 name="budget"。控件 id 可自定，label 的 for 须与对应 id 一致。 -->
+
+      <fieldset>
+        <legend>演出筛选条件</legend>
+        <label for="play">剧目</label>
+        <select id="play" name="play">
+          <option value="all">全部剧目</option>
+          <option value="tianxianpei">天仙配</option>
+          <option value="nvfuma">女驸马</option>
+        </select>
+
+        <label for="budget">最高票价</label>
+        <input id="budget" type="number" name="budget" value="200" min="0" max="500" step="10" required/>
+      </fieldset>
+  
       <!-- END FILTERS -->
       <p><button type="button" data-check="play">单独检查剧目</button> <span id="check-play" aria-live="polite">待检查</span></p>
       <p><button type="button" data-check="budget">单独检查票价</button> <span id="check-budget" aria-live="polite">待检查</span></p>
@@ -33,6 +47,15 @@
       </p>
       <!-- BEGIN SESSION -->
       <!-- TODO：场次 name="session"，值 all/afternoon/evening；优惠 name="student"，值 yes。保留表单 filters 和结果 result。 -->
+      <fieldset>
+        <legend>场次与优惠</legend>
+        <input type="radio" id="all" name="session" value="all" checked></label for="all">不限场次</label>
+        <input type="radio" id="afternoon" name="session" value="afternoon"><label for="afternoon">下午</label>
+        <input type="radio" id="evening" name="session" value="evening"><label for="evening">晚上</label>
+        <input type="checkbox" id="student" name="student" value="yes"><label for="student">仅看学生优惠</label>
+      </fieldset>
+      <button type="submit">应用筛选</button>
+      <button type="reset">恢复默认</button>
       <!-- END SESSION -->
       <p><button type="button" data-check="session">单独检查场次</button> <span id="check-session" aria-live="polite">待检查</span></p>
       <p><button type="button" data-check="student">单独检查优惠</button> <span id="check-student" aria-live="polite">待检查</span></p>
