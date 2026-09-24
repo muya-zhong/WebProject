@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      黄梅戏演出筛选
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="field-checks.js" defer></script>
+    <script src="app.js" defer>
+    </script>
+  </head>
+  <body>
+    <h1>
+      黄梅戏演出筛选
+    </h1>
+    <p class="note">
+      黄梅戏主题教学练习。插画为自制示意，演出、商品与评价均为虚构，无真实交易或个人信息收集。
+    </p>
+    <nav><a href="debug.html">T4 表单排错</a> · <a href="signup.html">T5 活动报名</a> · <a href="report.html">报告</a></nav>
+    <form id="filters">
+      <p class="task-hint">
+        T1：剧目 name="play"（值 all／tianxianpei／nvfuma）；票价 name="budget"。固定值详见任务书对照表。
+      </p>
+      <!-- BEGIN FILTERS -->
+      <!-- TODO：剧目 name="play"；票价 name="budget"。控件 id 可自定，label 的 for 须与对应 id 一致。 -->
+      <!-- END FILTERS -->
+      <p><button type="button" data-check="play">单独检查剧目</button> <span id="check-play" aria-live="polite">待检查</span></p>
+      <p><button type="button" data-check="budget">单独检查票价</button> <span id="check-budget" aria-live="polite">待检查</span></p>
+      <p class="task-hint">
+        T2：场次共用 name="session"（值 all／afternoon／evening）；优惠 name="student"、value="yes"；按钮 type 为 submit／reset。
+      </p>
+      <!-- BEGIN SESSION -->
+      <!-- TODO：场次 name="session"，值 all/afternoon/evening；优惠 name="student"，值 yes。保留表单 filters 和结果 result。 -->
+      <!-- END SESSION -->
+      <p><button type="button" data-check="session">单独检查场次</button> <span id="check-session" aria-live="polite">待检查</span></p>
+      <p><button type="button" data-check="student">单独检查优惠</button> <span id="check-student" aria-live="polite">待检查</span></p>
+    </form>
+    <h2>
+      模拟筛选结果
+    </h2>
+    <p>
+      结果由提供的辅助脚本显示；本次重点是表单控件及属性。
+    </p>
+    <p id="result" aria-live="polite">
+      选择条件后应用筛选。
+    </p>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>表单排错练习</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="practice.js" defer></script>
+  </head>
+  <body>
+    <h1>表单排错练习</h1>
+    <p>仅使用虚构信息练习，不发送或保存个人数据。</p>
+    <nav><a href="index.html">演出筛选</a> · <a href="debug.html">表单排错</a> · <a href="signup.html">活动报名</a> · <a href="report.html">实验报告</a></nav>
+    <p class="task-hint">T4：在 BEGIN REPAIR 区域排查3处错误，逐一记录现象、原因、修改和复查。</p>
+    <form>
+      <!-- BEGIN REPAIR -->
+      <label for="visitor-name">体验者姓名</label>
+      <input id="visitor" name="visitor" required>
+      <fieldset>
+        <legend>选择一个体验场次</legend>
+        <label><input type="radio" name="morning" value="morning" checked>上午</label>
+        <label><input type="radio" name="afternoon" value="afternoon">下午</label>
+      </fieldset>
+      <label for="contact">联系邮箱</label>
+      <input id="contact" name="email" type="text" required>
+      <!-- END REPAIR -->
+      <button type="submit">检查输入</button>
+      <button type="reset">恢复默认</button>
+    </form>
+    <p id="feedback" aria-live="polite">请使用虚构姓名和 demo@example.com 等测试邮箱。</p>
+  </body>
+</html>

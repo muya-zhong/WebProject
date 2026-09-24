@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360">
+  <rect width="600" height="360" fill="#faf0dc"/>
+  <path d="M0 0H600V60Q450 120 300 60Q150 120 0 60Z" fill="#406047"/>
+  <path d="M0 300Q120 230 250 280Q420 120 600 290V360H0Z" fill="#406047" opacity=".22"/>
+  <circle cx="300" cy="150" r="34" fill="#406047"/>
+  <path d="M275 185Q170 215 125 165Q155 280 280 240L250 305H350L320 240Q435 275 485 165Q420 215 325 185Z" fill="#406047"/>
+  <text x="30" y="330" font-family="Microsoft YaHei,sans-serif" font-size="23" fill="#406047">文创与书签 · 教学插画 4</text>
+</svg>
