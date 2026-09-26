@@ -15,6 +15,15 @@
     <form>
       <!-- BEGIN SIGNUP -->
       <!-- TODO：根据任务书完成报名表；无需编写脚本。 -->
+      <fieldset>
+        <label>姓名<input type="text" name="name" required></label>
+        <label>邮箱<input type="emile" name="emile" required></label>
+        <label>唱腔体验<input type="radio" name="activity" value="changqiang" required></label>
+        <label>戏服赏析<input type="radio" name="activity" value="xifu"></label>
+        <label>脸谱绘制<input type="radio" name="activity" value="lianpu"></label>
+      </fieldset>
+      <button type="submit">检查</button>
+      <button type="reset">重置</button>
       <!-- END SIGNUP -->
     </form>
     <p id="feedback" aria-live="polite">尚未检查输入。</p>
