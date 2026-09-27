@@ -15,12 +15,24 @@
     <form>
       <!-- BEGIN SIGNUP -->
       <!-- TODO：根据任务书完成报名表；无需编写脚本。 -->
-      <fieldset>
-        <label>姓名<input type="text" name="name" required></label>
-        <label>邮箱<input type="emile" name="emile" required></label>
-        <label>唱腔体验<input type="radio" name="activity" value="changqiang" required></label>
-        <label>戏服赏析<input type="radio" name="activity" value="xifu"></label>
-        <label>脸谱绘制<input type="radio" name="activity" value="lianpu"></label>
+     <fieldset>
+        <legend>活动报名表</legend>
+
+        <label for="username">姓名</label>
+        <input id="username" type="text" name="username" required>
+
+        <label for="useremail">邮箱</label>
+        <input id="useremail" type="email" name="useremail" required>
+
+        <p>选择参与的活动：</p>
+        <input type="radio" id="act1" name="activity" value="changqiang" required>
+        <label for="act1">唱腔体验</label>
+
+        <input type="radio" id="act2" name="activity" value="xifu">
+        <label for="act2">戏服赏析</label>
+
+        <input type="radio" id="act3" name="activity" value="lianpu">
+        <label for="act3">脸谱绘制</label>
       </fieldset>
       <button type="submit">检查</button>
       <button type="reset">重置</button>

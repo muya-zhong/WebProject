@@ -16,7 +16,7 @@
       黄梅戏主题教学练习。插画为自制示意，演出、商品与评价均为虚构，无真实交易或个人信息收集。
     </p>
     <p>
-      姓名：待填写；学号：待填写；专业、年级、班级：待填写；日期、节次、地点：待填写。
+      姓名：钟沐雅；学号：071225075；专业、年级、班级：大数据25级1班；日期、节次、地点：2026年9月24日上午第二节L212。
     </p>
     <p>
       用编辑器替换“待填写”，保存后在浏览器查看。报告不是在线表单。
@@ -24,15 +24,25 @@
     <h2>
       一、实验目的
     </h2>
-    <p>
-      待填写：本次要掌握的核心操作。
-    </p>
+    <table>
+      <ol>
+        <li>掌握 HTML 表单基础标签使用，理解`label`标签与表单控件的关联方法，学会通过`id`、`name`、`value`区分表单元素属性。</li>
+        <li> 熟练运用单选框、复选框、下拉选择框等控件，完成表单分组、默认值设置，理解表单提交与重置功能。</li>
+        <li>能够阅读项目字段约定，按照规范编写表单，配合外部脚本完成数据筛选，排查 HTML 表单常见错误。</li>
+        <li>巩固 HTML 结构与 CSS 样式分离的开发思想，学会在指定代码区域内完成网页开发，不擅自修改原有 CSS 与 JS 脚本。</li>
+      </ol>
+    </table>
     <h2>
       二、实验环境与工具
     </h2>
-    <p>
-      待填写：系统、编辑器、浏览器。
-    </p>
+    <table>
+      <ul>
+        <li>操作系统：Windows 10 / Windows11</li>
+        <li>代码编辑器：VS Code</li>
+        <li>浏览器：Chrome（谷歌浏览器）</li>
+        <li>项目资源：实验素材、预设 CSS 样式、筛选辅助脚本`app.js`</li>
+      </ul>
+    </table>
     <h2>
       三、实验内容
     </h2>
@@ -40,14 +50,58 @@
       <a href="index.html">
         打开本人作品
       </a>
-      。待填写：完成哪些任务。
     </p>
+    <table>
+      <ul>
+        <li>T1 建立剧目与票价条件</li>
+        <li>T2 补齐场次、优惠与操作</li>
+        <li>T3 分组与操作检查</li>
+        <li>T4 修复3处表单错误</li>
+        <li>T5 独立制作活动报名表</li>
+      </ul>
+    </table>
     <h2>
       四、实验步骤
     </h2>
-    <p>
-      待填写：按任务编号简述本人操作顺序。
-    </p>
+    <table>
+      <ul>
+        <li>T1：
+          <ul>
+            <li>select剧目 name="play"，三个选项值正确</li>
+            <li>number票价 name="budget"，默认200，min0 max500 step10 required</li>
+            <li>label for 和控件id一一对应，点击文字可以选中控件</li>
+          </ul>
+        </li>
+        <li>T2：
+          <ul>
+            <li>单选框同一name="session"，默认选中all，只能单选</li>
+            <li>复选框 name="student" value="yes"</li>
+            <li>submit提交按钮、reset重置按钮齐全</li>
+          </ul>
+        </li>
+        <li>T3：
+          <ul>
+            <li>两组都使用 fieldset + legend 分组</li>
+            <li>label全部关联控件，Tab可以依次切换控件，方向键切换单选，空格勾选复选框，重置恢复初始状态。</li>
+          </ul>
+        </li>
+        <li>T4：
+          <ul>
+            <li>体验者姓名：label的for与input的id不匹配，修改使二者保持一致</li>
+            <li>场次单选框：两个单选框name属性不一致，修改统一name为session，实现互斥单选</li>
+            <li>联系邮箱：input类型为text，修改type为email，开启邮箱格式校验</li>
+          </ul>
+        </li>
+        <li>T5：
+          <ul>
+            <li>姓名文本输入框，设置required必填，id与label for关联</li>
+            <li>邮箱输入框type="email"，启用邮箱格式校验</li>
+            <li>活动单选组name统一为activity，实现互斥选择</li>
+            <li>设置submit检查按钮、reset重置按钮，使用fieldset+legend分组</li>
+          </ul>
+        </li>
+      </ul>
+    </table>
     <h2>
       五、结果与分析
     </h2>
@@ -55,49 +109,99 @@
       R1 关键实现
     </h3>
     <p>
-      待填写：选择一项任务，解释关键标签/属性/代码为什么这样写。
+    使用 fieldset+legend 实现表单分组；label 通过 for 绑定 id 实现点击文字选中；select 下拉选择剧目；number 输入框搭配 min、max、step、required 属性，限制票价范围并设为必填项。
     </p>
-    <pre><code>待填写：关键代码；尖括号写为&amp;lt;和&amp;gt;，不必粘贴整页。</code></pre>
-    <p>单项检查记录：剧目三种取值、票价200→120、场次三种取值、优惠未选→选中→取消。分别填写实际读取值：待填写。若不一致，记录修正与复查。</p>
+    <pre><code>
+      &lt;fieldset&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;legend&gt;演出筛选条件&lt;/legend&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;play&quot;&gt;剧目&lt;/label&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;select id=&quot;play&quot; name=&quot;play&quot;&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;all&quot;&gt;全部剧目&lt;/option&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;tianxianpei&quot;&gt;天仙配&lt;/option&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;nvfuma&quot;&gt;女驸马&lt;/option&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;label for=&quot;budget&quot;&gt;最高票价&lt;/label&gt;
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;input id=&quot;budget&quot; type=&quot;number&quot; name=&quot;budget&quot; value=&quot;200&quot; min=&quot;0&quot; max=&quot;500&quot; step=&quot;10&quot; required/&gt;
+      &lt;/fieldset&gt;
+    </code></pre>
+    <p>单项检查记录：剧目三种取值、票价200→120、场次三种取值、优惠未选→选中→取消。</p>
+    <table>
+      <ul>
+        <li>测试1：剧目为全部剧目，最高票价200，场次不限，不勾选学生优惠，得到4条结果：天仙配/上午/120元、天仙配/下午/180元、女驸马/上午/150元、女驸马/下午/200元</li>
+        <li>测试2：剧目为全部剧目，最高票价200，场次不限，勾选学生优惠，得到4条结果：天仙配/下午/80元、女驸马/晚上/160元、天仙配/晚上/120元、女驸马/下午/60元</li>
+        <li>测试3：保持其他条件不变，取消勾选学生优惠，筛选结果恢复为测试1的原始票价数据。</li>
+      </ul>
+    </table>
     <h3 id="R2">
       R2 实际验证
     </h3>
     <p>
       检查1：默认应用得到4条；预算50得到无结果。
       <br>
-      实际结果：待填写。
+      实际结果：恢复默认数据，并设置预算50，无符合条件演出。
     </p>
     <p>
       检查2：天仙配/晚上/120/优惠得到1条；重置恢复全部、200、不限、未选优惠。
       <br>
-      实际结果：待填写。
+      实际结果：天仙配 / 晚上 / 120元；<br>天仙配 / 下午 / 80元；女驸马 / 晚上 / 160元；天仙配 / 晚上 / 120元；女驸马 / 下午 / 60元
     </p>
     <p>
       检查3：票价为空、-10、510、125应被阻止，120可通过；逐项记录实际结果。
       <br>
-      实际结果：待填写。
+      实际结果：
     </p>
-    <p>检查4：点击说明文字、Tab焦点、场次方向键、优惠空格切换、重置。实际结果：待填写。</p>
+    <table>
+      <ul>
+        <li>表单校验测试1：票价输入为空，提示：请填写此字段</li>
+        <li>表单校验测试2：票价输入-10，提示：值必须大于等于零</li>
+        <li>表单校验测试3：票价输入510，提示：值必须小于或等于500</li>
+        <li>表单校验测试4：票价输入125，提示：请输入有效值，两个最接近的有效值分别为120和130</li>
+        <li>表单校验测试5：票价输入120，无提示，校验通过</li>
+      </ul>
+    </table>
+    <p>检查4：点击说明文字、Tab焦点、场次方向键、优惠空格切换、重置。实际结果：</p>
+    <table>
+      <ul>
+        <li>点击label说明文字，可锁定并激活对应表单控件</li>
+        <li>按Tab键可以在剧目、票价、场次等控件之间切换焦点</li>
+        <li>剧目下拉框，可使用上下方向键切换选项</li>
+        <li>场次单选框，可使用左右方向键切换选择</li>
+        <li>学生优惠复选框，获得焦点后按下空格，可切换勾选/取消勾选状态</li>
+        <li>点击重置按钮，表单恢复默认状态：剧目全部剧目，最高票价200，场次不限，学生优惠未勾选</li>
+      </ul>
+    </table>
     <p>检查5：报名表空姓名、错误邮箱、未选活动、有效输入、重置。实际结果：待填写；说明自定的name与value。</p>
+    <table>
+      <ul>
+        <li>姓名为空提交：提示请填写此字段</li>
+        <li>邮箱缺少@提交：提示请在电子邮件地址中包括@</li>
+        <li>未选择活动直接提交：提示请在这些选项中选择一个</li>
+        <li>正确填写姓名、邮箱并选择活动，表单检查通过</li>
+      </ul>
+    </table>
     <h3 id="R3">
       R3 排错与复查
     </h3>
-    <p>
-      待填写：debug.html的3处故障，各写“修改前现象—原因—修改—复查结果”。记录实际观察，不以参考答案替代操作。
-    </p>
+    <table>
+       <ul>
+          <li>体验者姓名：label的for与input的id不匹配，修改使二者保持一致</li>
+          <li>场次单选框：两个单选框name属性不一致，修改统一name为session，实现互斥单选</li>
+          <li>联系邮箱：input类型为text，修改type为email，开启邮箱格式校验</li>
+       </ul>
+    </table>
     <h3 id="R4">
       R4 本人结果截图
     </h3>
     <p>
       保存screenshots/result.png与screenshots/change.png后取消对应图片注释，补充状态说明：result.png为演出筛选，change.png为报名验证通过。
     </p>
-    <!-- <img src="screenshots/result.png" alt="本人完成状态"> -->
-    <!-- <img src="screenshots/change.png" alt="本人活动报名验证结果"> -->
+    <img src="screenshots/result.png" alt="本人完成状态">
+    <img src="screenshots/change.png" alt="本人活动报名验证结果">
     <h2>
       六、实验小结
     </h2>
     <p>
-      待填写：收获、未解决问题；AI使用情况及验证。
+      本次黄梅戏表单实验，我掌握了HTML表单相关标签，使用fieldset、legend分组表单，label通过for绑定id实现点击文字选中控件。借助AI学习单选框原理，同一组单选框name保持一致实现互斥选择；学会number输入框min、max、step、required原生校验属性，能够排查id与for不匹配、拼写错误等表单问题。通过边界值、键盘操作测试和多组筛选测试，熟悉网页表单编写、排错与测试的完整流程。
     </p>
     <p>
       成绩：教师填写。
