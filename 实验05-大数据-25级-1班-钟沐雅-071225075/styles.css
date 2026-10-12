@@ -1,0 +1,6 @@
+body { max-width: 980px; margin: 32px auto; padding: 0 18px; font: 17px/1.8 system-ui; color: #263747; }
+canvas, img { max-width: 100%; height: auto; border: 1px solid #b9c7cf; }
+section, details { margin: 20px 0; padding: 16px; border: 1px solid #ccd5da; }
+table { width: 100%; border-collapse: collapse; } th, td { border: 1px solid #bcc8d0; padding: 8px; text-align: left; }
+code { background: #eef2f5; } button { padding: 8px 16px; margin: 5px; } a { color: #126195; }
+pre { white-space: pre-wrap; } :focus-visible { outline: 3px solid #bc591f; }

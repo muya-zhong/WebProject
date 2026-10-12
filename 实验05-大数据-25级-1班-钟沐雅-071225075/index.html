@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>实验05：Canvas黄梅戏宣传卡</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="drawing.js" defer></script>
+    <script src="runner.js" defer></script>
+  </head>
+  <body>
+    <h1>实验05：Canvas黄梅戏宣传卡</h1>
+    <p>黄梅戏主题宣传卡绘图练习。内容为虚构活动，图片为AI参考重绘，并非原始剧照。</p>
+    <p><a href="report.html">实验报告</a></p>
+    <canvas id="poster" width="600" height="360" aria-label="黄梅雅韵宣传卡">宣传卡内容：黄梅雅韵，听乡音·赏戏韵，校园戏曲体验日。</canvas>
+    <p id="status" role="status">正在加载素材；若长时间无变化，请检查控制台或脚本文件。</p>
+    <p>T1：修改 drawing.js 的 BEGIN T1 区域。<button type="button" data-stage="T1" disabled>单独运行T1</button></p>
+    <p>T2：修改 drawing.js 的 BEGIN T2 区域。<button type="button" data-stage="T2" disabled>单独运行T2</button></p>
+    <p>T3：修改 drawing.js 的 BEGIN T3 区域。<button type="button" data-stage="T3" disabled>单独运行T3</button></p>
+    <p>T4：在 drawing.js 的 BEGIN T4 区域，先将图片画入画布，再添加文字。<button type="button" data-stage="T4" disabled>单独运行T4</button></p>
+    <p>T5：完成单项后组合。<button type="button" data-stage="all" disabled>绘制完整宣传卡</button></p>
+    <p>显示尺寸比较：<button type="button" data-size="600">600×360显示</button><button type="button" data-size="300">300×180显示</button>窄屏下自动缩小以适应页面。</p>
+  </body>
+</html>
