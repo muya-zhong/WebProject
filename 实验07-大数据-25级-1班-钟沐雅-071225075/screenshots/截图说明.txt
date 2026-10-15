@@ -1,0 +1,1 @@
+保存本人home.png、player.png、narrow.png；在report.html的5.4节取消对应图片代码注释。

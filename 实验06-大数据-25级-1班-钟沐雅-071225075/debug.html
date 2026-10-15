@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>实验06：播放页排错</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body { font-family: "Times New Roman", SimSun; }
+      h1,h2 { font-family: "Times New Roman", SimHei; }
+      /* 固定显示尺寸用于观察比例；object-fit使比例错误可见。保留此规则。 */
+      #debug-video { width: 600px; height: 180px; max-width: none; object-fit: fill; }
+      .video-view { overflow-x: auto; }
+    </style>
+  </head>
+  <body>
+    <h1>播放页排错</h1>
+    <p>T5：检查入口跳转、视频加载、人物比例，记录现象后逐项修复。共有3处错误，按此顺序复查。</p>
+    <p><a href="index.html">返回本人项目</a></p>
+    <h2>1. 入口检查</h2>
+    <!-- BEGIN DEBUG-LINK -->
+    <a href="play.html"><img src="assets/poster.png" alt="点击戏票进入播放页" width="720" height="300"></a>
+    <!-- END DEBUG-LINK -->
+    <h2>2. 播放与比例检查</h2>
+    <p>先使视频能播放，再观察人物是否变形。原视频720×480；本页固定显示宽600，检查上方样式中的显示高度。</p>
+    <div class="video-view">
+      <video id="debug-video" controls preload="metadata">
+        <!-- BEGIN DEBUG-SOURCE -->
+        <source src="assets/huangmei-oprea.mp4" type="video/mp4">
+        <!-- END DEBUG-SOURCE -->
+        浏览器不支持视频。
+      </video>
+    </div>
+    <p>本页为固定尺寸排错练习；窄屏时可在视频区域横向滚动。主项目的响应式显示要求不变。</p>
+  </body>
+</html>

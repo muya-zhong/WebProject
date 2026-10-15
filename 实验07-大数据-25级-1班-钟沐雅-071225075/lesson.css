@@ -1,0 +1,36 @@
+/* 已提供：文字显示区域和窗口变窄后的排版，不需要修改styles.css。 */
+.ticker {
+  overflow: hidden;
+  min-height: 90px;
+  padding-right: 60px;
+}
+.rolling { width: 100%; }
+/* BEGIN BASIC-STYLE */
+/* T3：为两页设置统一的背景色、正文颜色与字号、标题颜色和段落间距。 */
+/* END BASIC-STYLE */
+/* BEGIN MOTION-PATH */
+/* T4：from为起点，to为终点；只在花括号中填写transform。 */
+@keyframes travel {
+  from { /* TODO：原位置 */ }
+  to { /* TODO：向右60px */ }
+}
+/* END MOTION-PATH */
+/* BEGIN SCROLL */
+.rolling {
+  /* TODO：使用travel，单程8s、匀速、无限往返。 */
+}
+/* END SCROLL */
+/* BEGIN PAUSE */
+/* 已提供选择器：复选框被勾选时，选中后面media-row中的滚动文字。 */
+#pause-motion:checked ~ .media-row .rolling {
+  /* TODO：暂停动画。 */
+}
+/* 已提供选择器：鼠标停在观赏提示区域时，选中其中的滚动文字。 */
+.ticker:hover .rolling {
+  /* TODO：暂停动画。 */
+}
+/* END PAUSE */
+/* 已提供：用户选择减少动画时关闭文字运动，内容仍保留。 */
+@media (prefers-reduced-motion: reduce) {
+  .rolling { animation: none !important; transform: none; }
+}

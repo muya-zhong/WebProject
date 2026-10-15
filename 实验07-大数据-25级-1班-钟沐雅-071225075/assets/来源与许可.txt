@@ -1,0 +1,5 @@
+huangmei-opera.mp4：用户提供，源为网页课件/lesson-6/demo/huangmei-opera.mp4，未修改原视频；不声明CC0。
+huangmei-portrait.png：沿用实验05的AI参考重绘人物，不是原始剧照，不声明CC0。
+poster.png：本次720×300戏票参考卡截图，本次用作戏票入口图片和视频封面；实验07不要求重新绘制戏票。
+
+本次以实验06参考戏票图片作为已完成入口，滚动文字使用CSS实现。

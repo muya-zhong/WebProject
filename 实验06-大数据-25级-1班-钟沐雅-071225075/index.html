@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>黄梅戏视频宣传卡</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="drawing.js" defer></script>
+    <script src="card-runner.js" defer></script>
+  <style>body,button { font-family: "Times New Roman", SimSun; } h1,h2,h3,summary { font-family: "Times New Roman", SimHei; } canvas { max-width:100%; height:auto; } a:focus-visible { outline:3px solid #702B32; }</style>
+  </head>
+  <body>
+    <h1>黄梅戏视频宣传卡</h1>
+    <p>T1：在drawing.js的BEGIN CARD区域绘制720×300横向戏票（观赏区＋票根）；保存后刷新查看。</p>
+    <p>T2：在BEGIN CARD-LINK区域为整块画布添加链接，跳转player.html。</p>
+    <!-- BEGIN CARD-LINK -->
+    <!-- TODO：为画布添加链接，保留canvas的id与尺寸。 -->
+    <canvas id="poster" width="720" height="300" aria-label="黄梅戏视频宣传卡">黄梅戏视频欣赏宣传卡</canvas>
+    <!-- END CARD-LINK -->
+    <p id="draw-status" role="status">正在读取素材；若长时间不变，请检查脚本或浏览器控制台。</p>
+    <!-- BEGIN TEXT-LINK -->
+    <!-- TODO：补充“观看黄梅戏视频”的文字链接。 -->
+    <!-- END TEXT-LINK -->
+    <p><a href="report.html">实验报告</a></p>
+    <p><a href="debug.html">T5 播放页排错练习</a></p>
+  </body>
+</html>

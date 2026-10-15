@@ -1,0 +1,1 @@
+保存本人card.png和player.png，并在report.html中插入。
