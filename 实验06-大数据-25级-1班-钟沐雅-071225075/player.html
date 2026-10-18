@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>黄梅戏视频欣赏</title>
     <link rel="stylesheet" href="styles.css">
-
   <style>body,button { font-family: "Times New Roman", SimSun; } h1,h2,h3,summary { font-family: "Times New Roman", SimHei; } canvas { max-width:100%; height:auto; } a:focus-visible { outline:3px solid #702B32; }</style>
   </head>
   <body>
@@ -13,14 +12,19 @@
     <p>T3：在BEGIN VIDEO区域嵌入视频；素材与封面路径见任务书。</p>
     <!-- BEGIN VIDEO -->
     <!-- TODO：video与source、播放控件、封面、尺寸、备用文字。 -->
+    <video width="600" height="400" controls preload="metadata" poster="assets/poster.png">
+      <source src="assets/nihao.mp4" type="video/mp4">
+      您的浏览器不支持播放此视频，请更换浏览器。
+    </video>
     <!-- END VIDEO -->
     <p>T4：在BEGIN SUMMARY区域填写观看后的内容摘要。</p>
     <!-- BEGIN SUMMARY -->
-    <p>内容摘要：待填写。</p>
+    <p>内容摘要：黄梅戏唱腔婉转悠扬，画面富有传统国风美感，展现了经典戏曲独有的韵味。</p>
     <!-- END SUMMARY -->
     <!-- BEGIN RETURN-LINK -->
     <!-- TODO：添加返回index.html的链接。 -->
+    <p><a href="index.html">返回黄梅戏宣传卡页面</a></p>
     <!-- END RETURN-LINK -->
-    <p><a href="assets/huangmei-opera.mp4">直接打开视频文件</a></p>
+    <p><a href="assets/nihao.mp4">直接打开视频文件</a></p>
   </body>
 </html>
