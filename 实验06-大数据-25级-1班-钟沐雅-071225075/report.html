@@ -10,59 +10,75 @@
   </head>
   <body>
     <h1>实验06报告</h1>
-    <p>姓名、学号、班级、日期：待填写。<a href="index.html">本人作品</a></p>
-    <h2>一、实验目的</h2><p>待填写。</p><h2>二、环境与工具</h2><p>待填写。</p>
-    <h2>三、实验内容</h2><p>说明720×300戏票的左右分区、缺口、票号，以及与实验05布局相比的变化：待填写。</p><h2>四、实验步骤</h2><p>按T1—T5记录本人主要操作：待填写。</p>
+    <p>姓名、学号、班级、日期：钟沐雅，071225075，大数据25-1班，2026-10-18。<a href="index.html">本人作品</a></p>
+    <h2>一、实验目的</h2>
+    <p>复习Canvas绘图知识，使用Canvas绘制横向戏票样式的视频宣传卡片；掌握a标签包裹canvas实现页面跳转；熟练运用video、source标签嵌入本地视频，配置视频属性；排查网页代码错误，学习网页排错方法；完成页面间跳转闭环：宣传卡片→视频播放页→返回宣传卡片，掌握网页项目测试与验证方法。</p>
+    <h2>二、环境与工具</h2>
+    <p>操作系统：Windows；代码编辑器：Visual Studio Code；Live Server插件用于本地网页预览；浏览器（edge）用于页面测试；使用HTML、CSS、JavaScript（Canvas）完成开发。素材包含黄梅戏视频、人物图片与封面图。</p>
+    <h2>三、实验内容</h2>
+    <p>本次绘制720×300横向戏票宣传卡：以x=530为界分为左右两区，左侧观赏区放置人物图片、标题与简介文字；右侧为票根区域，放置票根文字、提示文字与票号HM-06。在票面左右中点(20,150)、(700,150)绘制半径14的圆形缺口，使用深枣红色覆盖形成票券撕口效果。
+与实验05相比：本次卡片采用戏票左右分区结构，新增票券缺口设计；使用HTML的a标签包裹canvas实现点击跳转，不再使用Canvas内部JS点击事件；页面新增独立视频播放页面player.html，实现视频播放功能，增加页面跳转闭环。</p>
+    <h2>四、实验步骤</h2>
+    <p>T1：打开drawing.js，在BEGIN CARD区域编写Canvas绘图代码，绘制票面矩形、分隔竖线、票券缺口，绘制人物图片、标题、简介与票根文字，完成横向戏票卡片绘制。<br>
+       T2：修改index.html，在BEGIN CARD-LINK使用a标签包裹canvas画布，在BEGIN TEXT-LINK添加文字链接，两者均指向player.html，实现点击卡片或文字跳转播放页。<br>
+       T3：编辑player.html的BEGIN VIDEO区域，添加video与source标签，配置controls、preload、poster、宽高等属性，嵌入黄梅戏本地视频。<br>
+       T4：在player.html中，BEGIN SUMMARY填写视频客观内容摘要；BEGIN RETURN-LINK添加返回index.html的超链接，完成页面返回入口。<br>
+       T5：打开debug.html，依次修复3处错误：修改跳转链接文件名、修正视频文件名字母拼写错误、修改视频CSS高度，修复视频画面拉伸变形问题，并在报告记录错误现象、原因与复查结果。</p>
+
     <h2>五、结果与分析</h2>
     <p>用编辑器修改本文件，替换各处“待填写”，保存后在浏览器查看。以下表格不是在线输入表单；按实际操作填写，不要只写“正常”。</p>
     <h3 id="checks">5.1 操作验证（T6）</h3>
     <table>
       <thead><tr><th scope="col">检查项目</th><th scope="col">操作与预期</th><th scope="col">实际现象</th><th scope="col">结论</th></tr></thead>
       <tbody>
-        <tr><th scope="row">卡片跳转</th><td>点击戏票，进入player.html。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">文字跳转</th><td>点击文字入口，进入player.html；Tab聚焦链接后按Enter也能进入。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">播放</th><td>点击播放，画面变化且时间增加。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">暂停</th><td>点击暂停，画面与播放时间停止变化。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">拖动进度</th><td>拖到新位置，播放时间改变并可继续播放。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">静音与音量</th><td>切换静音、调整音量，记录实际听到的变化；若无声，检查系统音量与输出设备，仍无法验证则注明原因。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">返回入口</th><td>点击返回链接，回到本人戏票页面。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
-        <tr><th scope="row">窄屏显示</th><td>窗口宽度约390像素时，主入口与播放页无整页横向溢出。</td><td>待填写</td><td>待填写：通过／未通过</td></tr>
+        <tr><th scope="row">卡片跳转</th><td>点击戏票，进入player.html。</td><td>点击 Canvas 绘制的戏票卡片，成功跳转至 player.html 播放页面。</td><td>通过</td></tr>
+        <tr><th scope="row">文字跳转</th><td>点击文字入口，进入player.html；Tab聚焦链接后按Enter也能进入。</td><td>点击 “观看黄梅戏视频” 文字链接，成功打开 player.html；使用 Tab 键可以聚焦到该文字链接，按下 Enter 键同样可以跳转播放页。</td><td>通过</td></tr>
+        <tr><th scope="row">播放</th><td>点击播放，画面变化且时间增加。</td><td>点击视频播放按钮，封面切换为黄梅戏视频画面，播放时间数字持续增加。</td><td>通过</td></tr>
+        <tr><th scope="row">暂停</th><td>点击暂停，画面与播放时间停止变化。</td><td>点击视频暂停按钮，视频画面静止，播放时间不再继续增长。</td><td>通过</td></tr>
+        <tr><th scope="row">拖动进度</th><td>拖到新位置，播放时间改变并可继续播放。</td><td>拖动进度条至新时间点，视频跳转至对应画面，时间更新，点击播放可继续播放。</td><td>通过</td></tr>
+        <tr><th scope="row">静音与音量</th><td>切换静音、调整音量，记录实际听到的变化；若无声，检查系统音量与输出设备，仍无法验证则注明原因。</td><td>点击视频静音按钮，声音开启关闭正常；拖动音量滑块，能够连续调节音量大小。</td><td>通过</td></tr>
+        <tr><th scope="row">返回入口</th><td>点击返回链接，回到本人戏票页面。</td><td>点击播放页 “返回宣传卡片” 链接，成功跳转回 index.html 戏票页面。</td><td>通过</td></tr>
+        <tr><th scope="row">窄屏显示</th><td>窗口宽度约390像素时，主入口与播放页无整页横向溢出。</td><td>浏览器窗口缩小至 390px，index 和 player 页面自适应，没有整体横向滚动溢出；debug.html 的视频区域可以横向滚动，符合要求。</td><td>通过</td></tr>
       </tbody>
     </table>
     <h3 id="repairs">5.2 三处改错记录（T5）</h3>
     <p>记录debug.html中的三处预设错误。先观察再修改，每次修改后重新打开或刷新页面复查。</p>
-    <h4>错误1：入口跳转</h4>
+    <h4>错误1：入口跳转链接</h4>
     <table>
       <tbody>
-        <tr><th scope="row">修改前现象</th><td>待填写：你进行了什么操作，页面出现什么结果。</td></tr>
-        <tr><th scope="row">原因定位</th><td>待填写：出错文件、区域或属性，以及原因。</td></tr>
-        <tr><th scope="row">具体修改</th><td>待填写：修改前的内容 → 修改后的内容。</td></tr>
-        <tr><th scope="row">复查结果</th><td>待填写：再次操作的方法、实际结果及是否修复。</td></tr>
+        <tr><th scope="row">修改前现象</th><td>点击debug.html页面的戏票图片，尝试跳转页面，提示页面无法找到，跳转失败。</td></tr>
+        <tr><th scope="row">原因定位</th><td>出错文件：debug.html，位置在BEGIN DEBUG-LINK区域。a标签href写的网页文件名错误，目标播放页面是player.html，代码写为play.html。</td></tr>
+        <tr><th scope="row">具体修改</th><td>href="play.html" → href="player.html"</td></tr>
+        <tr><th scope="row">复查结果</th><td>再次点击戏票图片，成功打开player.html播放页面，问题已修复。</td></tr>
       </tbody>
     </table>
+
     <h4>错误2：视频加载</h4>
     <table>
       <tbody>
-        <tr><th scope="row">修改前现象</th><td>待填写：你进行了什么操作，页面出现什么结果。</td></tr>
-        <tr><th scope="row">原因定位</th><td>待填写：出错文件、区域或属性，以及原因。</td></tr>
-        <tr><th scope="row">具体修改</th><td>待填写：修改前的内容 → 修改后的内容。</td></tr>
-        <tr><th scope="row">复查结果</th><td>待填写：再次操作的方法、实际结果及是否修复。</td></tr>
+        <tr><th scope="row">修改前现象</th><td>打开debug.html页面，视频区域只显示“浏览器不支持视频”文字，视频无法加载播放。</td></tr>
+        <tr><th scope="row">原因定位</th><td>出错文件：debug.html，位置在BEGIN DEBUG-SOURCE区域。视频文件名拼写错误，`huangmei-oprea.mp4`字母颠倒，浏览器404找不到视频文件。</td></tr>
+        <tr><th scope="row">具体修改</th><td>src="assets/huangmei-oprea.mp4" → src="assets/huangmei-opera.mp4"</td></tr>
+        <tr><th scope="row">复查结果</th><td>刷新debug.html页面，视频控件正常出现，视频可以加载、播放，播放时间正常增加，问题已修复。</td></tr>
       </tbody>
     </table>
-    <h4>错误3：显示比例</h4>
+
+    <h4>错误3：视频画面比例</h4>
     <table>
       <tbody>
-        <tr><th scope="row">修改前现象</th><td>待填写：你进行了什么操作，页面出现什么结果。</td></tr>
-        <tr><th scope="row">原因定位</th><td>待填写：出错文件、区域或属性，以及原因。</td></tr>
-        <tr><th scope="row">具体修改</th><td>待填写：修改前的内容 → 修改后的内容。</td></tr>
-        <tr><th scope="row">复查结果</th><td>待填写：再次操作的方法、实际结果及是否修复。</td></tr>
+        <tr><th scope="row">修改前现象</th><td>视频加载成功后播放，视频里人物上下被压扁，画面拉伸变形。</td></tr>
+        <tr><th scope="row">原因定位</th><td>出错文件：debug.html，顶部#debug-video样式。原视频720×480比例为3:2，CSS设置width:600px;height:180px，宽高比例不匹配，加上object-fit:fill强制拉伸画面。</td></tr>
+        <tr><th scope="row">具体修改</th><td>height: 180px; → height: 400px;</td></tr>
+        <tr><th scope="row">复查结果</th><td>刷新页面播放视频，宽600高400维持3:2原始比例，人物不再拉伸压扁，画面比例正常，问题已修复。</td></tr>
       </tbody>
     </table>
+
     <h3 id="explanation">5.3 原理说明</h3>
     <p><strong>问题：</strong>为什么画布上画出的“点击观看”文字本身不会跳转？本项目通过什么HTML结构实现整张卡片的跳转？</p>
-    <p>本人解释：待填写。</p>
+    <p>本人解释：Canvas绘制出的文字只是图片像素内容，不是网页标签元素，因此不能点击跳转。本项目使用a超链接标签包裹整个canvas画布，让整张卡片拥有点击跳转功能。</p>
     <p><strong>其他问题（如有）：</strong>主项目中遇到的其他问题及解决过程；没有则填写“无”，不重复抄写上面的三处改错。</p>
-    <p>记录：待填写。</p>
+    <p>记录：初次运行视频无法加载，出现404资源错误。原因是VS Code打开的是外层总文件夹，导致相对路径匹配错误。解决方法为单独打开实验六文件夹运行Live Server，素材路径正常识别，视频成功加载。</p>
+
     <h3 id="screenshots">5.4 本人结果截图</h3>
     <p>先将截图保存到本项目的screenshots文件夹，再删除对应图片代码前后的注释标记，使图片显示出来。截图必须来自本人项目。</p>
     <h4>截图1：新绘戏票</h4>
