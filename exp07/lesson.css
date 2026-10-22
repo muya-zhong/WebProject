@@ -7,30 +7,48 @@
 .rolling { width: 100%; }
 /* BEGIN BASIC-STYLE */
 /* T3：为两页设置统一的背景色、正文颜色与字号、标题颜色和段落间距。 */
+body{
+  background-color:#f8f5f0 ;
+  color:#222 ;
+  font-size:18px;
+  line-height: 1.6;
+}
+h1,h2{
+  color: #8B2323;
+}
+P{
+  margin-bottom: 1em;
+}
 /* END BASIC-STYLE */
 /* BEGIN MOTION-PATH */
 /* T4：from为起点，to为终点；只在花括号中填写transform。 */
 @keyframes travel {
-  from { /* TODO：原位置 */ }
-  to { /* TODO：向右60px */ }
+  from {transform: translateX(0px); }
+  to { transform: translateX(60px); }
 }
 /* END MOTION-PATH */
 /* BEGIN SCROLL */
 .rolling {
-  /* TODO：使用travel，单程8s、匀速、无限往返。 */
+  animation: travel 8s linear infinite alternate;
+  transition:all 0.2s ease;
 }
 /* END SCROLL */
 /* BEGIN PAUSE */
 /* 已提供选择器：复选框被勾选时，选中后面media-row中的滚动文字。 */
 #pause-motion:checked ~ .media-row .rolling {
-  /* TODO：暂停动画。 */
+ animation-play-state: paused;
 }
 /* 已提供选择器：鼠标停在观赏提示区域时，选中其中的滚动文字。 */
 .ticker:hover .rolling {
-  /* TODO：暂停动画。 */
+ animation-play-state: paused;
 }
 /* END PAUSE */
 /* 已提供：用户选择减少动画时关闭文字运动，内容仍保留。 */
 @media (prefers-reduced-motion: reduce) {
   .rolling { animation: none !important; transform: none; }
+}
+
+.rolling:hover{
+  color:#c82020;
+  transform: translateY(-2px);
 }
